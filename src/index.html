@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CulinaryPath — Plataforma de Aprendizaje</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div id="app">
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <span class="sidebar-label">Curso activo</span>
-        <h1 class="sidebar-title">Cocina Desde Cero</h1>
-        <div class="sidebar-meta">
-          <span>16 temas</span><span class="sep">·</span><span>5 fases</span>
-        </div>
-      </div>
-      <div class="skill-tree-scroll">
-        <skill-tree id="main-tree"></skill-tree>
-      </div>
-      <div class="sidebar-legend" id="phase-legend"></div>
-    </aside>
-    <main class="content-area">
-      <content-viewer id="main-viewer"></content-viewer>
-    </main>
-  </div>
+    <div class="app-container">
+        <skill-tree id="sidebar"></skill-tree>
+        <content-viewer id="viewer"></content-viewer>
+    </div>
 
-  <script src="app.js"></script>
+    <script type="module">
+        import './modules/skillTree.js';
+        import './modules/contentViewer.js';
+        import './index.js';
+    </script>
 </body>
 </html>
